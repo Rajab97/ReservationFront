@@ -1,0 +1,139 @@
+@media only screen and (max-width: 576px) {
+    body.login {
+        #loginContainer {
+            padding: 30px 15px;
+            width: 80%;
+            .companyLogo {
+                width: 75%;
+                margin: 0 auto;
+            }
+            .loginForm {
+                .loginFormIntro {
+                    form {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    body.login {
+        #loginContainer {
+            padding: 30px 15px;
+            width: 50%;
+            .loginForm {
+                .loginFormIntro {
+                    form {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body.login {
+        #loginContainer {
+            padding: 40px 20px;
+            width: 55%;
+            .loginForm {
+                .loginFormIntro {
+                    form {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body.login {
+        #loginContainer {
+            padding: 60px 30px;
+            width: 70%;
+            .loginForm {
+                .loginFormIntro {
+                    width: 90%;
+                    margin: 0 auto;
+                    transform: translateY(0%);
+                    h2 {
+                        margin-top: 0;
+                    }
+                    form {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width:1050px) {
+    body.login {
+        #loginContainer {
+            padding: 60px 30px;
+            width: 70%;
+            .loginForm {
+                .loginFormIntro {
+                    width: 90%;
+                    margin: 0 auto;
+                    transform: translateY(0%);
+                    h2 {
+                        margin-top: 0;
+                    }
+                    form {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body.login {
+        #loginContainer {
+            padding: 60px 30px;
+            width: 70%;
+            .loginForm {
+                .loginFormIntro {
+                    width: 70%;
+                    margin: 0 auto;
+                    transform: translateY(15%);
+                    h2 {
+                        margin-top: 0;
+                    }
+                    form {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    body.login {
+        #loginContainer {
+            padding: 60px 30px;
+            width: 70%;
+            .loginForm {
+                .loginFormIntro {
+                    width: 70%;
+                    margin: 0 auto;
+                    transform: translateY(25%);
+                    h2 {
+                        margin-top: 0;
+                    }
+                    form {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1164 @@
+.calendarButtonNormal, .calendarButtonDark, .calendarButtonLight {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 16px;
+}
+@media screen and (min-width: 320px) {
+  .calendarButtonNormal, .calendarButtonDark, .calendarButtonLight {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .calendarButtonNormal, .calendarButtonDark, .calendarButtonLight {
+    font-size: 18px;
+  }
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
+a:hover {
+  text-decoration: none;
+}
+
+i {
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+*:focus {
+  outline: none;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.ffR {
+  font-family: "Raleway", sans-serif !important;
+}
+
+.centeredContainer {
+  position: relative;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.centeredElement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.calendarButton {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 16px;
+}
+@media screen and (min-width: 320px) {
+  .calendarButton {
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  .calendarButton {
+    font-size: 18px;
+  }
+}
+
+.calendarButtonLight {
+  background-color: #6fbbf7;
+}
+.calendarButtonLight:hover {
+  background-color: #57b0f6;
+  color: #fff;
+}
+
+.calendarButtonDark {
+  background-color: #6fbbf7;
+}
+.calendarButtonDark:hover {
+  background-color: #57b0f6;
+  color: #fff;
+}
+
+.calendarButtonNormal {
+  background-color: #2196F2;
+  color: #fff;
+}
+.calendarButtonNormal:hover {
+  background-color: #0c7cd5;
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .calendarButtonLight {
+    padding: 6px 10px;
+  }
+
+  .calendarButtonDark {
+    padding: 6px 10px;
+  }
+
+  .calendarButtonNormal {
+    padding: 6px 10px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .calendarButtonLight {
+    padding: 6px 10px;
+  }
+
+  .calendarButtonDark {
+    padding: 6px 10px;
+  }
+
+  .calendarButtonNormal {
+    padding: 6px 10px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .calendarButtonLight {
+    padding: 10px 14px;
+  }
+
+  .calendarButtonDark {
+    padding: 10px 14px;
+  }
+
+  .calendarButtonNormal {
+    padding: 10px 14px;
+  }
+}
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .calendarButtonLight {
+    padding: 12px 16px;
+  }
+
+  .calendarButtonDark {
+    padding: 12px 16px;
+  }
+
+  .calendarButtonNormal {
+    padding: 12px 16px;
+  }
+}
+nav {
+  background-color: #2b373b;
+}
+nav .cotent .logo span {
+  height: 75;
+  padding: 0;
+  background-color: #eee;
+}
+nav .cotent .logo span img {
+  width: 75px;
+  height: 75px;
+}
+nav .cotent .logo strong {
+  color: #eee;
+  font-size: 20px;
+  line-height: 75px;
+}
+@media screen and (min-width: 320px) {
+  nav .cotent .logo strong {
+    font-size: calc(20px + 11 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  nav .cotent .logo strong {
+    font-size: 31px;
+  }
+}
+nav .cotent .user .userInfo {
+  position: relative;
+  top: 5px;
+  font-size: 18px;
+}
+@media screen and (min-width: 320px) {
+  nav .cotent .user .userInfo {
+    font-size: calc(18px + 7 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  nav .cotent .user .userInfo {
+    font-size: 25px;
+  }
+}
+nav .cotent .user .btn-group a {
+  cursor: pointer;
+}
+
+#calendar .calendarHeader {
+  padding: 15px 0px;
+}
+#calendar .calendarHeader .calendarArrows .leftPageButton {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #fff;
+  cursor: pointer;
+}
+#calendar .calendarHeader .calendarArrows .rightPageButton {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: #fff;
+  cursor: pointer;
+}
+#calendar .calendarHeader .calendarArrows .todayButton {
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+#calendar .calendarHeader .currentCommonDate h1 {
+  color: #444;
+  font-weight: 500;
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarHeader .currentCommonDate h1 {
+    font-size: calc(20px + 11 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarHeader .currentCommonDate h1 {
+    font-size: 31px;
+  }
+}
+#calendar .calendarHeader .typeOfPrezentation div span {
+  border-radius: 0;
+  cursor: pointer;
+}
+#calendar .calendarHeader .typeOfPrezentation div span:first-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+#calendar .calendarHeader .typeOfPrezentation div span:last-child {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+#calendar .calendarHeader .typeOfPrezentation div span.active {
+  background-color: #0c7cd5;
+  color: #fff;
+}
+#calendar table,
+#calendar td,
+#calendar th {
+  border: 1px solid #415359;
+  font-weight: 500;
+  font-size: 12px;
+}
+@media screen and (min-width: 320px) {
+  #calendar table,
+#calendar td,
+#calendar th {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar table,
+#calendar td,
+#calendar th {
+    font-size: 18px;
+  }
+}
+#calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+#calendar table thead tr th {
+  text-align: center;
+  color: #444;
+}
+#calendar table thead tr:last-child {
+  border-bottom: 1px solid #dee2e6;
+}
+#calendar .calendarContainer {
+  display: none;
+}
+#calendar .calendarContainer.active {
+  display: block;
+}
+#calendar .calendarContainerMonth {
+  overflow-x: auto;
+}
+#calendar .calendarContainerMonth table.calendarMonth {
+  width: 100%;
+}
+#calendar .calendarContainerMonth table.calendarMonth thead tr th {
+  text-align: center;
+  color: #444;
+  width: 14.2857142857%;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td {
+  height: 130px;
+  text-align: right;
+  vertical-align: top;
+  width: 14.2857142857%;
+  cursor: pointer;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td .dateText {
+  margin-right: 5px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td .dateText.notActive {
+  color: #c4c4c4;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td .reservationContainer {
+  padding: 0px 4px;
+  height: 84px;
+  overflow: hidden;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td .reservationContainer .memberName {
+  display: inline-block;
+  width: 100%;
+  border-radius: 7px;
+  margin-bottom: 2px;
+  padding: 3px 5px;
+  max-height: 21px;
+  font-size: 9px;
+  background-color: #2196F2;
+  text-align: left;
+  color: #fff;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerMonth table.calendarMonth tbody tr td .reservationContainer .memberName {
+    font-size: calc(9px + 3 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerMonth table.calendarMonth tbody tr td .reservationContainer .memberName {
+    font-size: 12px;
+  }
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td .reservationContainer .memberName .time {
+  float: right;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td .dots {
+  color: #dee2e6;
+  margin-right: 5px;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td.last .dateText {
+  color: #dee2e6;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr td.currentDate {
+  background-color: #e2f1fd;
+}
+#calendar .calendarContainerMonth table.calendarMonth tbody tr:nth-last-child(2) {
+  border-bottom: 2px solid #415359;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro {
+  height: auto;
+  max-height: 80vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th {
+  width: 14%;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th a {
+  color: #444;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th:first-child {
+  width: 2%;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th.currentDate {
+  background-color: #e2f1fd;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td {
+  text-align: right;
+  font-weight: 400;
+  padding-right: 4px;
+  width: 13%;
+  padding: 0;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td:first-child {
+  width: 9%;
+  padding: 4px 7px;
+  font-size: 13px;
+  text-align: center;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td:first-child {
+    font-size: calc(13px + 4 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td:first-child {
+    font-size: 17px;
+  }
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved {
+  background-color: #dee2e6;
+  overflow-x: hidden;
+}
+#calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved span {
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 7px;
+  display: block;
+  width: 200%;
+  height: 30px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 12px;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved span {
+    font-size: calc(12px + 3 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved span {
+    font-size: 15px;
+  }
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro {
+  height: auto;
+  max-height: 80vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody thead tr th {
+  width: 90%;
+  padding: 5px 10px;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody thead tr th a {
+  color: #444;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody thead tr th:first-child {
+  width: 10%;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody thead tr th.currentDate {
+  background-color: #e2f1fd;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td {
+  text-align: right;
+  font-weight: 400;
+  padding-right: 4px;
+  width: 96%;
+  padding: 0;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+  width: 2%;
+  padding: 4px 7px;
+  font-size: 13px;
+  text-align: center;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+    font-size: calc(13px + 4 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+    font-size: 17px;
+  }
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:last-child {
+  width: 2%;
+  padding: 4px 7px;
+  font-size: 13px;
+  text-align: center;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:last-child {
+    font-size: calc(13px + 4 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:last-child {
+    font-size: 17px;
+  }
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.selected td:first-child {
+  background-color: #9C27B0 !important;
+  color: #fff;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.selected td:nth-child(2) {
+  overflow: hidden;
+  background-color: #dee2e6;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.selected td:nth-child(2) span {
+  display: inline-block;
+  color: black;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  padding: 5px 15px;
+  width: 200%;
+  overflow: hidden;
+  text-align: left;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.selected td:nth-child(2) span {
+    font-size: calc(12px + 3 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.selected td:nth-child(2) span {
+    font-size: 15px;
+  }
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.selected td:last-child {
+  background-color: #dee2e6;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.reserved td:first-child {
+  background-color: #9C27B0;
+  color: #fff;
+  background-color: #2196F2;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.reserved td:nth-child(2) {
+  overflow: hidden;
+  background-color: #dee2e6;
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.reserved td:nth-child(2) span {
+  display: inline-block;
+  color: black;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  padding: 5px 15px;
+  width: 200%;
+  overflow: hidden;
+  text-align: left;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.reserved td:nth-child(2) span {
+    font-size: calc(12px + 3 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.reserved td:nth-child(2) span {
+    font-size: 15px;
+  }
+}
+#calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr.reserved td:last-child {
+  background-color: #dee2e6;
+}
+#calendar .calendarContainerDay .reservationForm {
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#calendar .calendarContainerList .calendarContainerListIntro {
+  height: auto;
+  max-height: 80vh;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr {
+  width: 100%;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr td {
+  padding: 10px;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader {
+  background-color: #eee;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td {
+  width: 100%;
+  color: #444;
+  font-size: 15px;
+  width: 40%;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td {
+    font-size: calc(15px + 7 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td {
+    font-size: 22px;
+  }
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td:first-child {
+  border-right: 0px;
+  cursor: pointer;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td:last-child {
+  width: 60%;
+  border-left: 0px;
+  cursor: pointer;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader.currentDate {
+  background-color: #e2f1fd;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td {
+  color: #444;
+  font-weight: 400;
+  font-size: 12px;
+  width: 40%;
+}
+@media screen and (min-width: 320px) {
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td {
+    font-size: calc(12px + 6 * ((100vw - 320px) / 1280));
+  }
+}
+@media screen and (min-width: 1600px) {
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td {
+    font-size: 18px;
+  }
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td:first-child {
+  border-right: 0px;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td:last-child {
+  width: 60%;
+  border-left: 0px;
+}
+#calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td.title .reservationType {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: #2196F2;
+  margin-right: 10px;
+}
+
+.cotent {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 480px) {
+  nav .cotent .logo span {
+    height: 50px;
+  }
+  nav .cotent .logo span img {
+    width: 50px;
+    height: 50px;
+  }
+  nav .cotent .logo strong {
+    line-height: 50px;
+    color: #eee;
+  }
+  nav .cotent .user {
+    line-height: 50px;
+  }
+  nav .cotent .user .userInfo {
+    color: #fff;
+    margin-right: 7px;
+  }
+  #calendar .calendarHeader {
+    padding: 0px 0px;
+    margin-bottom: 10px;
+  }
+  #calendar .calendarHeader .calendarArrows {
+    margin-bottom: 15px;
+  }
+  #calendar .calendarHeader .calendarArrows .todayButton {
+    background-color: #6fbbf7;
+  }
+  #calendar .calendarHeader .currentCommonDate h1 {
+    text-align: right;
+  }
+  #calendar .calendarHeader .typeOfPrezentation div {
+    float: left;
+  }
+  #calendar .calendarHeader .typeOfPrezentation div a.active {
+    padding: 6px 10px;
+  }
+  #calendar .calendarContainerMonth table.calendarMonth {
+    overflow-x: scroll;
+    width: 200%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro {
+    overflow-x: scroll;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody {
+    width: 300%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th {
+    width: 13%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th:first-child {
+    width: 9%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td {
+    width: 13%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td:first-child {
+    width: 9%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved a {
+    padding: 5px 15px;
+    height: 30px;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td {
+    width: 75%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+    width: 25%;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  #calendar .calendarHeader .calendarArrows .todayButton {
+    background-color: #6fbbf7;
+  }
+  #calendar .calendarHeader .typeOfPrezentation {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  #calendar .calendarHeader .typeOfPrezentation div a.active {
+    padding: 10px 14px;
+  }
+  #calendar .calendarContainerMonth table.calendarMonth {
+    overflow-x: scroll;
+    width: 150%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro {
+    overflow-x: scroll;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody {
+    width: 300%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th {
+    width: 13%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody thead tr th:first-child {
+    width: 9%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td {
+    width: 13%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td:first-child {
+    width: 9%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved a {
+    padding: 5px 15px;
+    height: 30px;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td {
+    width: 82%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+    width: 18%;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  nav {
+    background-color: #2b373b;
+  }
+  nav .cotent .logo span {
+    height: 75px;
+    padding: 0;
+    background-color: #eee;
+  }
+  nav .cotent .logo span img {
+    width: 75px;
+    height: 75px;
+  }
+  nav .cotent .logo strong {
+    color: #eee;
+    line-height: 75px;
+  }
+  nav .cotent .user {
+    line-height: 75px;
+  }
+  nav .cotent .user .userInfo {
+    margin-right: 15px;
+    margin-top: 4px;
+  }
+  #calendar .calendarHeader {
+    margin-bottom: 15px;
+  }
+  #calendar .calendarHeader .calendarArrows .todayButton {
+    background-color: #6fbbf7;
+  }
+  #calendar .calendarHeader .currentCommonDate h1 {
+    text-align: center;
+  }
+  #calendar .calendarHeader .typeOfPrezentation {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #calendar .calendarHeader .typeOfPrezentation div {
+    float: right;
+  }
+  #calendar .calendarContainerMonth {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerMonth table.calendarMonth {
+    overflow-x: auto;
+    width: 150%;
+  }
+  #calendar .calendarContainerWeek {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro {
+    overflow-x: auto;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody {
+    width: 150%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td {
+    width: 12.5%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td:first-child {
+    width: 12.5%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved a {
+    padding: 5px 15px;
+    height: 30px;
+  }
+  #calendar .calendarContainerDay {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td {
+    width: 70%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+    width: 25%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:last-child {
+    width: 5%;
+  }
+  #calendar .calendarContainerList {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td {
+    width: 20%;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td:last-child {
+    width: 80%;
+    border-left: 0px;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td {
+    width: 20%;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td:last-child {
+    width: 80%;
+    border-left: 0px;
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  #calendar .calendarHeader .calendarArrows .todayButton {
+    background-color: #6fbbf7;
+  }
+  #calendar .calendarHeader .typeOfPrezentation div a.active {
+    padding: 12px 16px;
+  }
+  #calendar .calendarContainerMonth {
+    overflow-x: auto;
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerMonth table.calendarMonth {
+    width: 125%;
+  }
+  #calendar .calendarContainerWeek {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro {
+    overflow-x: auto;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody {
+    width: 100%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td {
+    width: 12.5%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td:first-child {
+    width: 12.5%;
+  }
+  #calendar .calendarContainerWeek .calendarContainerWeekIntro table.calendarWeekBody tbody tr td.reserved a {
+    padding: 5px 15px;
+    height: 30px;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td {
+    width: 78%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+    width: 17%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:last-child {
+    width: 5%;
+  }
+  #calendar .calendarContainerList {
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td {
+    width: 20%;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listHeader td:last-child {
+    width: 80%;
+    border-left: 0px;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td {
+    width: 20%;
+  }
+  #calendar .calendarContainerList .calendarContainerListIntro table.calendarListBody tbody tr.listItem td:last-child {
+    width: 80%;
+    border-left: 0px;
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1600px) {
+  #calendar .calendarHeader .calendarArrows .todayButton {
+    background-color: #6fbbf7;
+  }
+  #calendar .calendarHeader .typeOfPrezentation div a.active {
+    padding: 12px 16px;
+  }
+  #calendar .calendarContainerMonth {
+    overflow-x: auto;
+    width: 70%;
+    margin: 0 auto;
+  }
+  #calendar .calendarContainerMonth table.calendarMonth {
+    width: 100%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td {
+    width: 78%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:first-child {
+    width: 17%;
+  }
+  #calendar .calendarContainerDay .calendarContainerDayIntro table.calendarDayBody tbody tr td:last-child {
+    width: 5%;
+  }
+}
+#loginPage {
+  background-color: #9053c7;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+#loginPage #loginContainer {
+  padding: 100px 50px;
+  width: 60%;
+  background-color: #2b373b;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+}
+#loginPage #loginContainer .companyLogo img {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+#loginPage #loginContainer .loginForm .loginFormIntro h2 {
+  font-style: italic;
+  text-align: center;
+  font-size: xx-large;
+  padding: 15px 0px;
+  color: white;
+}
+#loginPage #loginContainer .loginForm .loginFormIntro form {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+#loginPage #loginContainer .loginForm .loginFormIntro form label {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500;
+}
+#loginPage #loginContainer .loginForm .loginFormIntro form .formSubmit {
+  display: block;
+  padding: 15px 10px;
+  border-radius: 4px;
+  background-color: #178acc;
+  width: 100%;
+  color: white;
+  font-size: larger;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  border: 0px solid transparent;
+  transition: background-color 0.5s ease;
+  margin-top: 25px;
+}
+#loginPage #loginContainer .loginForm .loginFormIntro form .formSubmit:focus {
+  outline: 0;
+}
+#loginPage #loginContainer .loginForm .loginFormIntro form .formSubmit:hover {
+  background-color: #9053c7;
+}
+#loginPage #loginContainer .loginForm .loginFormIntro form .formSubmit:disabled {
+  background-color: #126b9e;
+}
+
+@media only screen and (max-width: 576px) {
+  body.login #loginContainer {
+    padding: 30px 15px;
+    width: 80%;
+  }
+  body.login #loginContainer .companyLogo {
+    width: 75%;
+    margin: 0 auto;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro form {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 576px) {
+  body.login #loginContainer {
+    padding: 30px 15px;
+    width: 50%;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro form {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body.login #loginContainer {
+    padding: 40px 20px;
+    width: 55%;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro form {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body.login #loginContainer {
+    padding: 60px 30px;
+    width: 70%;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro {
+    width: 90%;
+    margin: 0 auto;
+    transform: translateY(0%);
+  }
+  body.login #loginContainer .loginForm .loginFormIntro h2 {
+    margin-top: 0;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro form {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1050px) {
+  body.login #loginContainer {
+    padding: 60px 30px;
+    width: 70%;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro {
+    width: 90%;
+    margin: 0 auto;
+    transform: translateY(0%);
+  }
+  body.login #loginContainer .loginForm .loginFormIntro h2 {
+    margin-top: 0;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro form {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body.login #loginContainer {
+    padding: 60px 30px;
+    width: 70%;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro {
+    width: 70%;
+    margin: 0 auto;
+    transform: translateY(15%);
+  }
+  body.login #loginContainer .loginForm .loginFormIntro h2 {
+    margin-top: 0;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro form {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  body.login #loginContainer {
+    padding: 60px 30px;
+    width: 70%;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro {
+    width: 70%;
+    margin: 0 auto;
+    transform: translateY(25%);
+  }
+  body.login #loginContainer .loginForm .loginFormIntro h2 {
+    margin-top: 0;
+  }
+  body.login #loginContainer .loginForm .loginFormIntro form {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

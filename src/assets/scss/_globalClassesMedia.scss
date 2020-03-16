@@ -1,0 +1,58 @@
+@media only screen and (max-width: 480px) {
+    .calendarButtonLight {
+        padding: 6px 10px;
+    }
+    .calendarButtonDark {
+        padding: 6px 10px;
+    }
+    .calendarButtonNormal {
+        padding: 6px 10px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .calendarButtonLight {
+        padding: 6px 10px;
+    }
+    .calendarButtonDark {
+        padding: 6px 10px;
+    }
+    .calendarButtonNormal {
+        padding: 6px 10px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    .calendarButtonLight {
+        padding: 10px 14px;
+    }
+    .calendarButtonDark {
+        padding: 10px 14px;
+    }
+    .calendarButtonNormal {
+        padding: 10px 14px;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+    .calendarButtonLight {
+        padding: 12px 16px;
+    }
+    .calendarButtonDark {
+        padding: 12px 16px;
+    }
+    .calendarButtonNormal {
+        padding: 12px 16px;
+    }
+}

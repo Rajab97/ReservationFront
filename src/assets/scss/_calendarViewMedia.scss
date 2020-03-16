@@ -1,0 +1,489 @@
+@media only screen and (min-width: 480px) {
+    nav {
+        .cotent {
+            .logo {
+                span {
+                    height: 50px;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+                strong {
+                    line-height: 50px;
+                    color: #eee;
+                }
+            }
+            .user {
+                line-height: 50px;
+                .userInfo {
+                    color: $fcLight;
+                    margin-right: 7px;
+                }
+                .logOut {}
+            }
+        }
+    }
+    #calendar {
+        .calendarHeader {
+            padding: 0px 0px;
+            margin-bottom: 10px;
+            .calendarArrows {
+                margin-bottom: 15px;
+                .todayButton {
+                    background-color: $bcLight;
+                }
+            }
+            .currentCommonDate {
+                h1 {
+                    text-align: right;
+                }
+            }
+            .typeOfPrezentation {
+                div {
+                    float: left;
+                    a.active {
+                        padding: 6px 10px;
+                    }
+                }
+            }
+        }
+        .calendarContainerMonth {
+            table.calendarMonth {
+                overflow-x: scroll;
+                width: 200%;
+            }
+        }
+        .calendarContainerWeek {
+            .calendarContainerWeekIntro {
+                overflow-x: scroll;
+                table.calendarWeekBody {
+                    width: 300%;
+                    thead {
+                        tr {
+                            th {
+                                width: 13%;
+                                &:first-child {
+                                    width: 9%;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                width: 13%;
+                                &:first-child {
+                                    width: 9%;
+                                }
+                            }
+                            td.reserved {
+                                a {
+                                    padding: 5px 15px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .calendarContainerDay {
+            .calendarContainerDayIntro {
+                table.calendarDayBody {
+                    tbody {
+                        tr {
+                            td {
+                                width: 75%;
+                                &:first-child {
+                                    width: 25%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    #calendar {
+        .calendarHeader {
+            .calendarArrows {
+                .todayButton {
+                    background-color: $bcLight;
+                }
+            }
+            .typeOfPrezentation {
+                margin-top: 10px;
+                margin-bottom: 15px;
+                div {
+                    a.active {
+                        padding: 10px 14px;
+                    }
+                }
+            }
+        }
+        .calendarContainerMonth {
+            table.calendarMonth {
+                overflow-x: scroll;
+                width: 150%;
+            }
+        }
+        .calendarContainerWeek {
+            .calendarContainerWeekIntro {
+                overflow-x: scroll;
+                table.calendarWeekBody {
+                    width: 300%;
+                    thead {
+                        tr {
+                            th {
+                                width: 13%;
+                                &:first-child {
+                                    width: 9%;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {
+                                width: 13%;
+                                &:first-child {
+                                    width: 9%;
+                                }
+                            }
+                            td.reserved {
+                                a {
+                                    padding: 5px 15px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .calendarContainerDay {
+            .calendarContainerDayIntro {
+                table.calendarDayBody {
+                    tbody {
+                        tr {
+                            td {
+                                width: 82%;
+                                &:first-child {
+                                    width: 18%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {
+    nav {
+        background-color: #2b373b;
+        .cotent {
+            .logo {
+                span {
+                    height: 75px;
+                    padding: 0;
+                    background-color: #eee;
+                    img {
+                        width: 75px;
+                        height: 75px;
+                    }
+                }
+                strong {
+                    color: #eee;
+                    line-height: 75px;
+                }
+            }
+            .user {
+                line-height: 75px;
+                .userInfo {
+                    margin-right: 15px;
+                    margin-top: 4px;
+                }
+                .logOut {}
+            }
+        }
+    }
+    #calendar {
+        // .calendarHeader {
+        //     padding: 15px 0px;
+        //     .typeOfPrezentation {
+        //         div {
+        //             a.active {
+        //                 padding: 10px 14px;
+        //             }
+        //         }
+        //     }
+        // }
+        .calendarHeader {
+            margin-bottom: 15px;
+            .calendarArrows {
+                .todayButton {
+                    background-color: $bcLight;
+                }
+            }
+            .currentCommonDate {
+                h1 {
+                    text-align: center;
+                }
+            }
+            .typeOfPrezentation {
+                margin-top: 0;
+                margin-bottom: 0;
+                div {
+                    float: right;
+                }
+            }
+        }
+        .calendarContainerMonth {
+            width: 70%;
+            margin: 0 auto;
+            table.calendarMonth {
+                overflow-x: auto;
+                width: 150%;
+            }
+        }
+        .calendarContainerWeek {
+            width: 70%;
+            margin: 0 auto;
+            .calendarContainerWeekIntro {
+                overflow-x: auto;
+                table.calendarWeekBody {
+                    width: 150%;
+                    tbody {
+                        tr {
+                            td {
+                                width: 12.5%;
+                                &:first-child {
+                                    width: 12.5%;
+                                }
+                            }
+                            td.reserved {
+                                a {
+                                    padding: 5px 15px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .calendarContainerDay {
+            width: 70%;
+            margin: 0 auto;
+            .calendarContainerDayIntro {
+                table.calendarDayBody {
+                    tbody {
+                        tr {
+                            td {
+                                width: 70%;
+                                &:first-child {
+                                    width: 25%;
+                                }
+                                &:last-child {
+                                    width: 5%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .calendarContainerList {
+            width: 70%;
+            margin: 0 auto;
+            .calendarContainerListIntro {
+                table.calendarListBody {
+                    tbody {
+                        tr.listHeader {
+                            td {
+                                width: 20%;
+                                &:last-child {
+                                    width: 80%;
+                                    border-left: 0px;
+                                }
+                            }
+                        }
+                        tr.listItem {
+                            td {
+                                width: 20%;
+                                &:last-child {
+                                    width: 80%;
+                                    border-left: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+    #calendar {
+        .calendarHeader {
+            .calendarArrows {
+                .todayButton {
+                    background-color: $bcLight;
+                }
+            }
+            .typeOfPrezentation {
+                div {
+                    a.active {
+                        padding: 12px 16px;
+                    }
+                }
+            }
+        }
+        .calendarContainerMonth {
+            overflow-x: auto;
+            width: 70%;
+            margin: 0 auto;
+            table.calendarMonth {
+                width: 125%;
+            }
+        }
+        .calendarContainerWeek {
+            width: 70%;
+            margin: 0 auto;
+            .calendarContainerWeekIntro {
+                overflow-x: auto;
+                table.calendarWeekBody {
+                    width: 100%;
+                    tbody {
+                        tr {
+                            td {
+                                width: 12.5%;
+                                &:first-child {
+                                    width: 12.5%;
+                                }
+                            }
+                            td.reserved {
+                                a {
+                                    padding: 5px 15px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .calendarContainerDay {
+            .calendarContainerDayIntro {
+                table.calendarDayBody {
+                    tbody {
+                        tr {
+                            td {
+                                width: 78%;
+                                &:first-child {
+                                    width: 17%;
+                                }
+                                &:last-child {
+                                    width: 5%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .calendarContainerList {
+            width: 70%;
+            margin: 0 auto;
+            .calendarContainerListIntro {
+                table.calendarListBody {
+                    tbody {
+                        tr.listHeader {
+                            td {
+                                width: 20%;
+                                &:last-child {
+                                    width: 80%;
+                                    border-left: 0px;
+                                }
+                            }
+                        }
+                        tr.listItem {
+                            td {
+                                width: 20%;
+                                &:last-child {
+                                    width: 80%;
+                                    border-left: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1600px) {
+    #calendar {
+        .calendarHeader {
+            .calendarArrows {
+                .todayButton {
+                    background-color: $bcLight;
+                }
+            }
+            .typeOfPrezentation {
+                div {
+                    a.active {
+                        padding: 12px 16px;
+                    }
+                }
+            }
+        }
+        .calendarContainerMonth {
+            overflow-x: auto;
+            width: 70%;
+            margin: 0 auto;
+            table.calendarMonth {
+                width: 100%;
+            }
+        }
+        .calendarContainerDay {
+            .calendarContainerDayIntro {
+                table.calendarDayBody {
+                    tbody {
+                        tr {
+                            td {
+                                width: 78%;
+                                &:first-child {
+                                    width: 17%;
+                                }
+                                &:last-child {
+                                    width: 5%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

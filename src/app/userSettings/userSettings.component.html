@@ -1,0 +1,70 @@
+<app-navBar>
+</app-navBar>
+<style>
+    .changeColorForm {
+        width: 25%;
+        margin: 0 auto;
+    }
+</style>
+<form class="changeColorForm clearfix" (ngSubmit)="saveValues()" #userForm="ngForm">
+
+    <div class="form-group">
+        <label for="formName">Name</label>
+        <input type="text" class="form-control" id="formName" name="user.name" required maxlength="25" minlength="3" placeholder="Enter name" [(ngModel)]="user.name" #name="ngModel">
+        <div class="invalid-feedback" *ngIf="name.errors?.required">
+            Name is required.
+        </div>
+        <div class="invalid-feedback" *ngIf="name.errors?.maxlength">
+            Name must be less than 25 characters.
+        </div>
+        <div class="invalid-feedback" *ngIf="name.errors?.minlength">
+            Name must be more than 2 characters.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="formSurname">Surname</label>
+        <input type="text" class="form-control" id="formSurname" name="user.surname" required maxlength="25" minlength="3" placeholder="Enter surname" [(ngModel)]="user.surname" #surname="ngModel">
+        <div class="invalid-feedback" *ngIf="surname.errors?.required">
+            Surname is required.
+        </div>
+        <div class="invalid-feedback" *ngIf="surname.errors?.maxlength">
+            Surname must be less than 25 characters.
+        </div>
+        <div class="invalid-feedback" *ngIf="surname.errors?.minlength">
+            Surname must be more than 2 characters.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="formUsername">Username</label>
+        <input type="text" class="form-control" id="formUsername" name="user.username" required maxlength="25" placeholder="Enter username" [(ngModel)]="user.username" #username="ngModel">
+        <div class="invalid-feedback" *ngIf="username.errors?.required">
+            Username is required.
+        </div>
+        <div class="invalid-feedback" *ngIf="username.errors?.maxlength">
+            Username must be less than 25 characters.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="formEmail">Email</label>
+        <input type="email" class="form-control" id="formEmail" name="user.email" maxlength="25" [email]="true" placeholder="Enter email" [(ngModel)]="user.email" #email="ngModel">
+
+        <div class="invalid-feedback" *ngIf="email.errors?.maxlength">
+            Email must be less than 25 characters. {{email.errors}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="usercolor">Color</label>
+        <input class="form-control" [(colorPicker)]="user.color" [ngStyle]="{'color': '#fff'}" required maxlength="7" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" [style.background]="user.color" id="usercolor" name="user.color" [(ngModel)]="user.color" #selectedColor="ngModel"
+            (colorPickerChange)="setColorValue($event)" />
+        <div class="invalid-feedback" *ngIf="selectedColor.errors?.required">
+            Color is required.
+        </div>
+        <div class="invalid-feedback" *ngIf="selectedColor.errors?.maxlength">
+            Color must be less than 7 characters.
+        </div>
+        <div class="invalid-feedback" *ngIf="selectedColor.errors?.pattern">
+            You must enter valid color code.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary right" [disabled]="checkIsFormActive()">Save</button>
+</form>

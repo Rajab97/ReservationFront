@@ -1,0 +1,416 @@
+$width: 100%;
+nav {
+    background-color: #2b373b;
+    .cotent {
+        .logo {
+            span {
+                height: 75;
+                padding: 0;
+                background-color: #eee;
+                img {
+                    width: 75px;
+                    height: 75px;
+                }
+            }
+            strong {
+                color: #eee;
+                @include font-size($min_width, $max_width, 20px, 31px);
+                line-height: 75px;
+            }
+        }
+        .user {
+            .userInfo {
+                position: relative;
+                top: 5px;
+                @include font-size($min_width, $max_width, 18px, 25px);
+            }
+            .btn-group {
+                a {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+#calendar {
+    .calendarHeader {
+        padding: 15px 0px;
+        .calendarArrows {
+            .leftPageButton {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                color: $fcLight;
+                cursor: pointer;
+            }
+            .rightPageButton {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                color: $fcLight;
+                cursor: pointer;
+            }
+            .todayButton {
+                margin-left: 10px;
+                color: $fcLight;
+                cursor: pointer;
+            }
+        }
+        .currentCommonDate {
+            h1 {
+                color: $fcDark;
+                font-weight: 500;
+                @include font-size($min_width, $max_width, 20px, 31px);
+            }
+        }
+        .typeOfPrezentation {
+            div {
+                span {
+                    border-radius: 0;
+                    cursor: pointer;
+                    &:first-child {
+                        border-top-left-radius: 0.25rem;
+                        border-bottom-left-radius: 0.25rem;
+                    }
+                    &:last-child {
+                        border-top-right-radius: 0.25rem;
+                        border-bottom-right-radius: 0.25rem;
+                    }
+                }
+                span.active {
+                    background-color: $bcDark;
+                    color: $fcLight;
+                }
+            }
+        }
+    }
+    table,
+    td,
+    th {
+        border: 1px solid lighten($color: #2b373b, $amount: 10);
+        font-weight: 500;
+        @include font-size($min_width, $max_width, 12px, 18px)
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        thead {
+            tr {
+                th {
+                    text-align: center;
+                    color: $fcDark;
+                }
+                &:last-child {
+                    border-bottom: 1px solid $bcShadow;
+                }
+            }
+        }
+    }
+    .calendarContainer {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .calendarContainerMonth {
+        overflow-x: auto;
+        table.calendarMonth {
+            width: 100%;
+            thead {
+                tr {
+                    th {
+                        text-align: center;
+                        color: $fcDark;
+                        width: $width/7;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        height: 130px;
+                        text-align: right;
+                        vertical-align: top;
+                        width: $width/7;
+                        cursor: pointer;
+                        .dateText {
+                            margin-right: 5px;
+                            margin-top: 5px;
+                            font-weight: 500;
+                            &.notActive {
+                                color: lighten($color: $fcDark, $amount: 50%);
+                            }
+                        }
+                        .reservationContainer {
+                            padding: 0px 4px;
+                            height: 84px;
+                            overflow: hidden;
+                            .memberName {
+                                display: inline-block;
+                                width: 100%;
+                                border-radius: 7px;
+                                margin-bottom: 2px;
+                                padding: 3px 5px;
+                                max-height: 21px;
+                                @include font-size($min_width, $max_width, 9px, 12px);
+                                background-color: $bcNormal;
+                                text-align: left;
+                                color: $fcLight;
+                                .time {
+                                    float: right;
+                                }
+                            }
+                        }
+                        .dots {
+                            color: $fcShadow;
+                            margin-right: 5px;
+                        }
+                        &.last {
+                            .dateText {
+                                color: $fcShadow;
+                            }
+                        }
+                    }
+                    td.currentDate {
+                        background-color: lighten($color: $bcNormal, $amount: 40%);
+                    }
+                    &:nth-last-child(2) {
+                        border-bottom: 2px solid lighten($color: #2b373b, $amount: 10);
+                    }
+                }
+            }
+        }
+    }
+    .calendarContainerWeek {
+        .calendarContainerWeekIntro {
+            height: auto;
+            max-height: 80vh;
+            overflow: hidden;
+            overflow-y: auto;
+            table.calendarWeekBody {
+                thead {
+                    tr {
+                        th {
+                            a {
+                                color: $fcDark;
+                            }
+                            width: 14%;
+                            &:first-child {
+                                width: 2%;
+                            }
+                        }
+                        th.currentDate {
+                            background-color: lighten($color: $bcNormal, $amount: 40%);
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            text-align: right;
+                            font-weight: 400;
+                            padding-right: 4px;
+                            width: 13%;
+                            padding: 0;
+                            &:first-child {
+                                width: 9%;
+                                padding: 4px 7px;
+                                @include font-size($min_width, $max_width, 13px, 17px);
+                                text-align: center;
+                            }
+                        }
+                        td.reserved {
+                            background-color: $bcShadow;
+                            overflow-x: hidden;
+                            span {
+                                color: #fff;
+                                padding: 5px 15px;
+                                border-radius: 7px;
+                                display: block;
+                                width: 200%;
+                                height: 30px;
+                                overflow: hidden;
+                                text-align: left;
+                                @include font-size($min_width, $max_width, 12px, 15px)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .calendarContainerDay {
+        .calendarContainerDayIntro {
+            height: auto;
+            max-height: 80vh;
+            overflow: hidden;
+            overflow-y: auto;
+            table.calendarDayBody {
+                thead {
+                    tr {
+                        th {
+                            a {
+                                color: $fcDark;
+                            }
+                            width: 90%;
+                            &:first-child {
+                                width: 10%;
+                            }
+                            padding: 5px 10px;
+                        }
+                        th.currentDate {
+                            background-color: lighten($color: $bcNormal, $amount: 40%);
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            text-align: right;
+                            font-weight: 400;
+                            padding-right: 4px;
+                            width: 96%;
+                            padding: 0;
+                            &:first-child {
+                                width: 2%;
+                                padding: 4px 7px;
+                                @include font-size($min_width, $max_width, 13px, 17px);
+                                text-align: center;
+                            }
+                            &:last-child {
+                                width: 2%;
+                                padding: 4px 7px;
+                                @include font-size($min_width, $max_width, 13px, 17px);
+                                text-align: center;
+                            }
+                        }
+                    }
+                    tr.selected {
+                        td:first-child {
+                            background-color: $bcReserved !important;
+                            color: $fcLight;
+                        }
+                        td:nth-child(2) {
+                            overflow: hidden;
+                            background-color: $bcShadow;
+                            span {
+                                display: inline-block;
+                                color: black;
+                                border-bottom: 1px solid #eee;
+                                @include font-size($min_width, $max_width, 12px, 15px);
+                                padding: 5px 15px;
+                                width: 200%;
+                                overflow: hidden;
+                                text-align: left;
+                            }
+                        }
+                        td:last-child {
+                            background-color: $bcShadow;
+                        }
+                    }
+                    tr.reserved {
+                        td:first-child {
+                            background-color: $bcReserved;
+                            color: $fcLight;
+                            background-color: $bcNormal;
+                        }
+                        td:nth-child(2) {
+                            overflow: hidden;
+                            background-color: $bcShadow;
+                            span {
+                                display: inline-block;
+                                color: black;
+                                border-bottom: 1px solid #eee;
+                                @include font-size($min_width, $max_width, 12px, 15px);
+                                padding: 5px 15px;
+                                width: 200%;
+                                overflow: hidden;
+                                text-align: left;
+                            }
+                        }
+                        td:last-child {
+                            background-color: $bcShadow;
+                        }
+                    }
+                }
+            }
+        }
+        .reservationForm {
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+    .calendarContainerList {
+        .calendarContainerListIntro {
+            height: auto;
+            max-height: 80vh;
+            overflow: hidden;
+            overflow-y: auto;
+            border-radius: 5px;
+            table.calendarListBody {
+                tbody {
+                    tr {
+                        width: 100%;
+                        td {
+                            padding: 10px;
+                        }
+                    }
+                    tr.listHeader {
+                        background-color: $bcTHeader;
+                        td {
+                            width: 100%;
+                            color: $fcDark;
+                            @include font-size($min_width, $max_width, 15px, 22px);
+                            width: 40%;
+                            &:first-child {
+                                border-right: 0px;
+                                cursor: pointer;
+                            }
+                            &:last-child {
+                                width: 60%;
+                                border-left: 0px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    tr.listHeader.currentDate {
+                        background-color: lighten($color: $bcNormal, $amount: 40%);
+                    }
+                    tr.listItem {
+                        td {
+                            color: $fcDark;
+                            font-weight: 400;
+                            @include font-size($min_width, $max_width, 12px, 18px);
+                            width: 40%;
+                            &:first-child {
+                                border-right: 0px;
+                            }
+                            &:last-child {
+                                width: 60%;
+                                border-left: 0px;
+                            }
+                        }
+                        td.title {
+                            .reservationType {
+                                display: inline-block;
+                                position: relative;
+                                top: 2px;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 100%;
+                                background-color: $bcNormal;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cotent {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}

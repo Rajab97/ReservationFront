@@ -1,0 +1,156 @@
+<app-navBar></app-navBar>
+<div class="cotent">
+
+    <div id="calendar">
+        <div class="calendarHeader row">
+            <div class="calendarArrows clearfix col-md-4 col-xs-6 ">
+                <span class="leftPageButton left calendarButtonNormal" (click)="left()"><i class="fas fa-chevron-left"></i></span>
+                <span class="rightPageButton left calendarButtonNormal" (click)="right()"><i class="fas fa-chevron-right"></i></span>
+                <span class="todayButton left calendarButtonNormal" (click)="today()">Today</span>
+            </div>
+            <div class="currentCommonDate col-md-4 col-xs-6  mt-lg-0 ">
+                <h1 class="tcenter ffR mt-md-0" style="margin-top: 0px;">{{TopText}}
+                </h1>
+            </div>
+            <div class="typeOfPrezentation clearfix col-md-4 col-xs-12 mt-lg-0">
+                <div class="clearfix right">
+                    <span class="left calendarButton calendarButtonNormal" [ngClass]="{'active': navigate=='mounth'}" (click)="mounth()" href="# ">Month</span>
+                    <span class="left calendarButtonNormal " [ngClass]="{'active': navigate=='week'}" (click)="week()">Week</span>
+                    <span class="left calendarButtonNormal " [ngClass]="{'active': navigate=='day'}" (click)="day()">Day</span>
+                    <span class="left calendarButtonNormal " [ngClass]="{'active': navigate=='list'}" (click)="list()">List</span>
+                </div>
+            </div>
+        </div>
+        <div class="calendarContainerMonth calendarContainer " *ngIf="navigate=='mounth'" [ngClass]="{'active': navigate=='mounth'}">
+            <table class="calendarMonth">
+                <thead>
+                    <tr>
+                        <th *ngFor="let day of WEEKDAYSABV">{{day}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let weekDay of getWeekCountInMonth(); index as i">
+
+                        <td class="monthArea" [ngClass]="{currentDate: checkIfThisDateIsCurrent(i*7 + j)}" *ngFor="let day of getDaysOfWeek(weekDay) ; index as j" (click)="selectDay(j,i)">
+                            <span [ngClass]="{notActive: !checkIfDayBelongToThisMonth(j,i)}" class="dateText">{{day.day}}</span>
+                            <div class="reservationContainer" *ngIf="checkReservationForDay(i*7 + j)">
+                                <strong *ngFor="let reservation of getReservationForDay(i*7 + j,3)" [ngStyle]="{'background-color': reservation.backColor}" class="memberName clearfix">{{reservation.memberName}} <span class="time">{{reservation.time}}</span></strong>
+                            </div>
+                            <strong class="dots" *ngIf="checkReservationsCountMoreThanSendedLength(i*7 + j,3)"><i class="fas fa-ellipsis-h"></i></strong>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- <td class="last monthArea"><span class="dateText">26</span></td> -->
+        </div>
+        <div class="calendarContainerWeek calendarContainer " *ngIf="navigate=='week'" [ngClass]="{'active': navigate=='week'}">
+
+            <div class="calendarContainerWeekIntro">
+                <table class="calendarWeekBody">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th *ngFor="let day of WeekViewData; index as i" class="pointer" [ngClass]="{currentDate: checkIFThisWeekDayIsCurrent(i)}" (click)="selectDayByDayNumber(day.mounth,day.day)"><a>{{WEEKDAYSABV[i]+" "}} {{day.mounth+1}}/{{day.day}}</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let hour of WeekReservationForTime">
+                            <td>{{hour.time}}</td>
+                            <td [ngClass]="{'reserved': checkTimeAndWeekDayReservation(hour.timeId,0)}" (click)="selectDayByDayNumber(WeekViewData[0].mounth,WeekViewData[0].day)" [ngStyle]="{'background-color': checkTimeAndWeekDayReservation(hour.timeId,0) ? hour.reservationsForWeek[0].backColor : DefaultWhiteBcgForWeekTable}">
+                                <span *ngIf="checkTimeAndWeekDayReservation(hour.timeId,0)">{{hour.reservationsForWeek[0].memberName}}</span>
+                            </td>
+                            <td [ngClass]="{'reserved': checkTimeAndWeekDayReservation(hour.timeId,1)}" (click)="selectDayByDayNumber(WeekViewData[1].mounth,WeekViewData[1].day)" [ngStyle]="{'background-color': checkTimeAndWeekDayReservation(hour.timeId,1) ? hour.reservationsForWeek[1].backColor : DefaultWhiteBcgForWeekTable}">
+                                <span *ngIf="checkTimeAndWeekDayReservation(hour.timeId,1)">{{hour.reservationsForWeek[1].memberName}}</span>
+                            </td>
+                            <td [ngClass]="{'reserved': checkTimeAndWeekDayReservation(hour.timeId,2)}" (click)="selectDayByDayNumber(WeekViewData[2].mounth,WeekViewData[2].day)" [ngStyle]="{'background-color': checkTimeAndWeekDayReservation(hour.timeId,2) ? hour.reservationsForWeek[2].backColor : DefaultWhiteBcgForWeekTable}">
+                                <span *ngIf="checkTimeAndWeekDayReservation(hour.timeId,2)">{{hour.reservationsForWeek[2].memberName}}</span>
+                            </td>
+                            <td [ngClass]="{'reserved': checkTimeAndWeekDayReservation(hour.timeId,3)}" (click)="selectDayByDayNumber(WeekViewData[3].mounth,WeekViewData[3].day)" [ngStyle]="{'background-color': checkTimeAndWeekDayReservation(hour.timeId,3) ? hour.reservationsForWeek[3].backColor : DefaultWhiteBcgForWeekTable}">
+                                <span *ngIf="checkTimeAndWeekDayReservation(hour.timeId,3)">{{hour.reservationsForWeek[3].memberName}}</span>
+                            </td>
+                            <td [ngClass]="{'reserved': checkTimeAndWeekDayReservation(hour.timeId,4)}" (click)="selectDayByDayNumber(WeekViewData[4].mounth,WeekViewData[4].day)" [ngStyle]="{'background-color': checkTimeAndWeekDayReservation(hour.timeId,4) ? hour.reservationsForWeek[4].backColor : DefaultWhiteBcgForWeekTable}">
+                                <span *ngIf="checkTimeAndWeekDayReservation(hour.timeId,4)">{{hour.reservationsForWeek[4].memberName}}</span>
+                            </td>
+                            <td [ngClass]="{'reserved': checkTimeAndWeekDayReservation(hour.timeId,5)}" (click)="selectDayByDayNumber(WeekViewData[5].mounth,WeekViewData[5].day)" [ngStyle]="{'background-color': checkTimeAndWeekDayReservation(hour.timeId,5) ? hour.reservationsForWeek[5].backColor : DefaultWhiteBcgForWeekTable}">
+                                <span *ngIf="checkTimeAndWeekDayReservation(hour.timeId,5)">{{hour.reservationsForWeek[5].memberName}}</span>
+                            </td>
+                            <td [ngClass]="{'reserved': checkTimeAndWeekDayReservation(hour.timeId,6)}" (click)="selectDayByDayNumber(WeekViewData[6].mounth,WeekViewData[6].day)" [ngStyle]="{'background-color': checkTimeAndWeekDayReservation(hour.timeId,6) ? hour.reservationsForWeek[6].backColor : DefaultWhiteBcgForWeekTable}">
+                                <span *ngIf="checkTimeAndWeekDayReservation(hour.timeId,6)">{{hour.reservationsForWeek[6].memberName}}</span>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <div class="calendarContainerDay calendarContainer " *ngIf="navigate=='day'" [ngClass]="{'active': navigate=='day'}">
+
+            <div class="calendarContainerDayIntro">
+                <table class="calendarDayBody">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th [ngClass]="{currentDate: checkIFThisWeekDayIsCurrent(DayViewData.weekNumber)}"><a href="#">{{WEEKDAYS[DayViewData.weekNumber]}}</a></th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let hour of DayReservationForTime ; index as i" [ngClass]="{'selected': hour.selected ,'reserved': hour.reservationsForDay}">
+                            <td (click)="hour.isExpired == false && selectHourForReservation(hour)" [ngStyle]="{'background-color':hour.reservationsForDay ? hour.reservationsForDay.backColor : '#fff' }">{{hour.time}}</td>
+                            <td (click)="hour.isExpired == false && selectHourForReservation(hour)">
+                                <span *ngIf="hour.reservationsForDay != null && hour.reservationsForDay != undefined">{{hour.reservationsForDay.memberName}} - {{  hour.reservationsForDay.description}}</span>
+                                <span *ngIf="hour.selected">{{UserName}}</span>
+                            </td>
+                            <td><a *ngIf="checkReservationCancelationForCurrentUser(hour.reservationsForDay,hour.timeId)" (click)="CancelReservation(hour)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <form class="reservationForm clearfix" *ngIf="CheckAnyHourSelected()" #reservationForm="ngForm" (ngSubmit)="SaveReservation()">
+
+                <div class="form-group">
+                    <label for="forDescription">Description</label>
+                    <textarea type="text" rows="3" class="form-control" id="forDescription" name="description" placeholder="Enter description" [(ngModel)]="AddedReservationInfo.description"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary right">Submit</button>
+            </form>
+        </div>
+        <div class="calendarContainerList calendarContainer " *ngIf="navigate=='list'" [ngClass]="{'active': navigate=='list'}">
+
+            <div class="calendarContainerListIntro">
+                <table class="calendarListBody">
+                    <tbody *ngFor="let day of WeekDayReservationsList">
+                        <tr class="listHeader pointer" [ngClass]="{currentDate: checkIFThisWeekDayIsCurrent(day.weekIndex)}" (click)="selectDayByDayNumber(day.date.getMonth(),day.date.getDate())" *ngIf="day.reservations.length > 0">
+                            <td class="clearfix">
+                                <span class="left">{{WEEKDAYS[day.weekIndex]}}</span>
+                            </td>
+                            <td><span class="right" (click)="selectDayByDate(day.date)">{{day.dateText}}</span></td>
+                        </tr>
+                        <tr class="listItem" *ngFor="let reservation of day.reservations">
+                            <td class="time">{{reservation.time}}</td>
+                            <td class="title">
+                                <span class="reservationType" [ngStyle]="{'background-color': reservation.backColor}"></span> {{reservation.memberName}} - {{reservation.description}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+  <script src="https://kit.fontawesome.com/bdc43c4f09.js " crossorigin="anonymous "></script>
+  <script src="js/script.js "></script>
+</body>
+
+</html> -->
