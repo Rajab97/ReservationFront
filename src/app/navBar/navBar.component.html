@@ -17,7 +17,7 @@
                     <li role="menuitem" *ngIf="loggedIn()"><a class="dropdown-item" (click)="logout()">Logout</a></li>
                     <li role="menuitem" *ngIf="loggedIn()"><a class="dropdown-item" [routerLink]="['/changePassword']">Change password</a></li>
                     <li role="menuitem" *ngIf="loggedIn()"><a class="dropdown-item" [routerLink]="['/settings']">Settings</a></li>
-
+                    <li role="menuitem" *ngIf="loggedInAsAdmin()"><a class="dropdown-item" [routerLink]="['/register']">Registration</a></li>
                     <!-- <li role="menuitem" *ngIf="!loggedIn()"><a class="dropdown-item" (click)="login()">Login</a></li> -->
                     <!-- <li class="divider dropdown-divider"></li> -->
                 </ul>

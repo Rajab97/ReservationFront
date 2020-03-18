@@ -1,4 +1,3 @@
-
 import { from } from 'rxjs';
 
 
@@ -35,6 +34,7 @@ import { AlertifyjsService } from './_service/alertifyjs.service';
 import { environment } from 'src/environments/environment';
 import { MemberSettingsResolver } from './_resolvers/member-settings.resolver';
 import { MemberService } from './_service/member.service';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -51,7 +51,8 @@ export function tokenGetter():string{
       MainComponent,
       NavBarComponent,
       ChangePasswordComponent,
-      UserSettingsComponent
+      UserSettingsComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,

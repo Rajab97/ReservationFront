@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, catchError } from 'rxjs/operators';
 import {JwtHelperService} from '@auth0/angular-jwt'
 import { AlertifyjsService } from './alertifyjs.service';
 import { ChangePasswordDto } from '../_dtos/changePasswordDto';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { ChangeColorDto } from '../_dtos/changeColorDto';
 import { environment } from 'src/environments/environment';
 import { UserSettingsDto } from '../_dtos/UserSettingsDto';
+import { IsAdminDto } from '../_dtos/IsAdminDto';
+import { Roles } from '../_helperClasses/roles';
+import { RegistrationDto } from '../_dtos/registrationDto';
 @Injectable({
   providedIn: 'root'
 })
@@ -35,11 +38,16 @@ constructor(private http:HttpClient , private alertify:AlertifyjsService) {
         })
       );
   }
+ 
   loggedIn(){
     const token = localStorage.getItem("token")
     return !this.jwtHelper.isTokenExpired(token);
   }
-  logOut(){
+  loggedInAsAdmin():boolean{
+    const token = localStorage.getItem("token");
+    return !this.jwtHelper.isTokenExpired(token) && this.decodedToken.role == Roles.admin;
+  }
+  logOut() {
     this.decodedToken = null;
     this.alertify.message("Logout");
     localStorage.removeItem("token");

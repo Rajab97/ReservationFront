@@ -10,12 +10,12 @@ import { MemberService } from '../_service/member.service';
 })
 export class NavBarComponent implements OnInit {
 
-  userName:string
+  userName:string;
+  
   constructor(private _authService : AuthService , private router : Router ,private member:MemberService) { }
 
   ngOnInit() {
    this.member.getUserDetails().subscribe(m => this.userName = m.name + " " + m.surname);
-   
   }
   logout(){
     this._authService.logOut();
@@ -25,5 +25,7 @@ export class NavBarComponent implements OnInit {
   loggedIn():boolean{
     return this._authService.loggedIn();
   }
-
+  loggedInAsAdmin():boolean{
+    return this._authService.loggedInAsAdmin();
+  }
 }

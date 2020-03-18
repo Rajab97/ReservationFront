@@ -35,25 +35,27 @@ export class UserSettingsComponent implements OnInit {
   // }
   setColorValue(value:string){
     this.user.color = value;
-    console.log(this.user)
   }
   saveValues(){
-    if(this.userForm.valid){
+    if (!this.checkIsFormActive()) {
       let response:Observable<UserSettingsDto> = this._memberService.updateUserDetails(this.user);
       if(response == null){
         this._alertify.error("Error occured while updating user details.");
       }
-      response.subscribe(next =>{ console.log(next); this.userForm.reset(this.userForm.value); this.user = next; this._alertify.success("Saved successfully."); console.log(this.user);} , err => this._alertify.error(err))
+      response.subscribe(next =>{this.userForm.reset(this.userForm.value); this.user = next; this._alertify.success("Müvəffəqiyyətlə yadda saxlandı.");} , err => this._alertify.error(err))
+    }
+    else{
+      this._alertify.warning("Məlumatlar düzgün daxil edilməyib.");
     }
   }
  
-  checkIsFormActive(){
+  checkIsFormActive() {
     if(this.selectedColor.touched && this.userForm.valid){
       return false;
     }
-    if(this.userForm.dirty && this.userForm.valid)
-    return false;
+    if(this.userForm.dirty && this.userForm.valid){
+      return false;
+    }
     return true;
-    
   }
 }

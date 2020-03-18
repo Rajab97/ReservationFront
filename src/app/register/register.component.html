@@ -1,5 +1,4 @@
-<app-navBar>
-</app-navBar>
+<app-navBar></app-navBar>
 <style>
     .changeColorForm {
         width: 25%;
@@ -47,7 +46,16 @@
             Istifadəçi adı 25 herfden az olmalıdır.
         </div>
     </div>
-
+    <div class="form-group">
+        <label for="formPassword">Kod</label>
+        <input type="password" class="form-control" id="formPassword" name="user.password" required maxlength="25" placeholder="Kodunuzu daxil edin." [(ngModel)]="user.password" #password="ngModel">
+        <div class="invalid-feedback" *ngIf="password.errors?.required && userForm.submitted">
+            Kod daxil edilməlidir.
+        </div>
+        <div class="invalid-feedback" *ngIf="password.errors?.maxlength && userForm.submitted">
+            Kod 25 herfden az olmalıdır.
+        </div>
+    </div>
     <div class="form-group">
         <label for="formEmail">Email</label>
         <input type="email" class="form-control" id="formEmail" name="user.email" maxlength="25" [email]="true" placeholder="Emailinizi daxil edin." [(ngModel)]="user.email" #email="ngModel">
@@ -58,7 +66,7 @@
     </div>
     <div class="form-group">
         <label for="usercolor">Rəng</label>
-        <input class="form-control" [(colorPicker)]="user.color" [ngStyle]="{'color': '#fff'}" required maxlength="7" pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" [style.background]="user.color" id="usercolor" name="user.color" [(ngModel)]="user.color" #selectedColor="ngModel"
+        <input class="form-control" [(colorPicker)]="user.color" [ngStyle]="{'color': '#fff'}" required maxlength="7" placeholder="Rəng kodu daxil edin." pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$" [style.background]="user.color" id="usercolor" name="user.color" [(ngModel)]="user.color" #selectedColor="ngModel"
             (colorPickerChange)="setColorValue($event)" />
         <div class="invalid-feedback" *ngIf="selectedColor.errors?.required && userForm.submitted">
             Rəng daxil edilməlidir.
@@ -70,5 +78,5 @@
             Düzgün rəng kodu daxil edilməmişdir.
         </div>
     </div>
-    <button type="submit" class="btn btn-primary right">Dəyişdir</button>
+    <button type="submit" class="btn btn-primary right">Əlavə et</button>
 </form>
